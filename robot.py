@@ -29,7 +29,7 @@ total_price = 0
 for product in products:
 	print("Produkt: {:10} Antal: {:<10} Pris: {:>7} kr".format(product.name, product.count, product.price_with_tax()))
 
-print("-"*80)
+print("-"*80) # streckad linje
 
 for product in products:
 	total_price = total_price + product.price_with_tax()
