@@ -1,16 +1,17 @@
 
-#dictionairy
+#classes
 
-robot = {
-	"price":900, 
-	"count":2, 
-	"tax": 1.25,
-}
-book = {
-	"price": 100,
-	"count": 1,
-	"tax": 1.06,
-}
-print (robot["price"] * robot["count"] * robot["tax"] + book["price"] * book["count"] * book["tax"])
+class Product:
+	price = 0
+	count = 0
+	tax = 1
 
+robot = Product ()
+robot.price = 900
+robot.count = 2
+robot.tax = 1.25
 
+book = Product ()
+book.price = 100
+book.count = 1
+book.tax = 1.06
