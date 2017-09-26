@@ -15,10 +15,11 @@ class Product:
 			print("Rabatt")
 			return 0.9 * total #här läggs rabatten på 10% till
 		else: 
+			print("Ej rabatt")
 			return total #annars ingen rabatt
 
 products = [
-Product (price=400, count=2, tax=1.25), 
+Product (price=500, count=2, tax=1.25), 
 Product(price=100, count=1, tax=1.06)
 ]
 
