@@ -14,9 +14,12 @@ class Product:
 		if total > 500:
 			return 0.9 * total #här läggs rabatten på 10% till
 		else: 
-			return total 
+			return total #annars ingen rabatt
 
-products = [Product (price=900, count=2, tax=1.25), Product(price=100, count=1, tax=1.06)]
+products = [
+Product (price=900, count=2, tax=1.25), 
+Product(price=100, count=1, tax=1.06)
+]
 
 total_price = 0
 
