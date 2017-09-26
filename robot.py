@@ -12,13 +12,12 @@ class Product:
 	def price_with_tax(self):
 		total = self.price * self.count *self.tax
 		if total > 500:
-			print("Rabatt")
 			return 0.9 * total #här läggs rabatten på 10% till
 		else: 
 			return total #annars ingen rabatt
 
 products = [
-Product (price=400, count=2, tax=1.25), 
+Product (price=900, count=2, tax=1.25), 
 Product(price=100, count=1, tax=1.06)
 ]
 
