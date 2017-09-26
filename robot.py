@@ -18,7 +18,8 @@ class Product:
 
 products = [
 Product (price=900, count=2, tax=1.25), 
-Product(price=100, count=1, tax=1.06)
+Product(price=100, count=1, tax=1.06),
+Product(price=20, count=1, tax=1.25),
 ]
 
 total_price = 0
