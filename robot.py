@@ -17,6 +17,13 @@ class Product:
 		else: 
 			return total #annars ingen rabatt
 
+	def tax_per_product(self):
+		totaltax = self.price * self.count * self.tax - self.count * self.price
+		if self.price * self.count * self.tax > 500:
+			return 0.9 * totaltax 
+		else: 
+			return totaltax
+
 products = [
 Product(price=900, count=2, tax=1.25, name="Robot"), 
 Product(price=100, count=1, tax=1.06, name="Book"),
@@ -31,8 +38,19 @@ for product in products:
 
 print("-"*80) # streckad linje
 
+total_tax = 0
+
+for product in products:
+	total_tax = total_tax + product.tax_per_product()
+
+
 for product in products:
 	total_price = total_price + product.price_with_tax()
-print("Totalsumma: {:>39} kr".format(total_price))
+print("\nTotalsumma: {:>39} kr".format(total_price))
 
+#line break \n
 #Måsvingar där formateringen och variabeln ska in. 7 står för avståndet. Blir som en formaterad klass.
+
+
+print("Varav moms: {:>39} kr".format(total_tax))
+
